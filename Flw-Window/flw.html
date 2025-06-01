@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval';
+    style-src 'self' 'unsafe-inline';
+    connect-src 'self' http://127.0.0.1:5000;
+    img-src 'self';
+    ">
+    <title>Flw Window - PCB Predictor</title>
+    <link rel="stylesheet" href="flw-style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temperatures & Conveyor Settings</h1>
+
+        <!-- Entry fields for T1 to T10 and Conveyor Speed -->
+        <div class="input-row">
+            <div class="input-group">
+                <label for="t1">T1 (°C):</label>
+                <input type="text" id="t1" placeholder="T1">
+            </div>
+            <div class="input-group">
+                <label for="t2">T2 (°C):</label>
+                <input type="text" id="t2" placeholder="T2">
+            </div>
+            <div class="input-group">
+                <label for="t3">T3 (°C):</label>
+                <input type="text" id="t3" placeholder="T3">
+            </div>
+        </div>
+
+        <div class="input-row">
+            <div class="input-group">
+                <label for="t4">T4 (°C):</label>
+                <input type="text" id="t4" placeholder="T4">
+            </div>
+            <div class="input-group">
+                <label for="t5">T5 (°C):</label>
+                <input type="text" id="t5" placeholder="T5">
+            </div>
+            <div class="input-group">
+                <label for="t6">T6 (°C):</label>
+                <input type="text" id="t6" placeholder="T6">
+            </div>
+        </div>
+
+        <div class="input-row">
+            <div class="input-group">
+                <label for="t7">T7 (°C):</label>
+                <input type="text" id="t7" placeholder="T7">
+            </div>
+            <div class="input-group">
+                <label for="t8">T8 (°C):</label>
+                <input type="text" id="t8" placeholder="T8">
+            </div>
+            <div class="input-group">
+                <label for="t9">T9 (°C):</label>
+                <input type="text" id="t9" placeholder="T9">
+            </div>
+        </div>
+
+        <div class="input-row">
+            <div class="input-group">
+                <label for="t10">T10 (°C):</label>
+                <input type="text" id="t10" placeholder="T10">
+            </div>
+            <div class="input-group">
+                <label for="conveyor-speed">Conveyor Speed (mm/min):</label>
+                <input type="text" id="conveyor-speed" placeholder="Conveyor Speed">
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button id="predict-btn">Predict</button>
+            <button id="back-btn">Back</button>
+        </div>
+
+        <!-- Predictions Section -->
+        <div id="predictions" class="predictions-container" style="display:none;">
+            <h2>Predictions</h2>
+            <p id="max-rising-slope"></p>
+            <p id="soak-time"></p>
+            <p id="reflow-time"></p>
+            <p id="peak-temp"></p>
+        </div>
+    </div>
+
+    <script src="flw-script.js"></script>
+</body>
+</html>

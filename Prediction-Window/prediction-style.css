@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff4500, #ffcc00);
+    color: #0d100e; /* Black text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff; /* White background for the prediction box */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%; /* Increase width */
+    max-width: 1100px; /* Set max width */
+    height: auto; /* Adjust height */
+}
+
+h1 {
+    color: #000; /* Black text for heading */
+    margin-bottom: 20px;
+}
+
+/* Horizontal row layout for predictions */
+.predictions {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.prediction-item {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Bold text for the numerical values */
+.prediction-item p span {
+    font-weight: bold;
+}

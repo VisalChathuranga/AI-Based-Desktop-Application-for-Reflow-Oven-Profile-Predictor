@@ -1,0 +1,46 @@
+{
+  "name": "reflow-oven-desktop-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "T.A.Visal Chathuranga",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^32.1.1",
+    "electron-builder": "^24.13.3"
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.reflowoven",
+    "productName": "Reflow Oven Desktop App",
+    "files": [
+      "Main-Window/**/*",
+      "Flw-Window/**/*",
+      "Prediction-Window/**/*",
+      "python_backend/**/*",
+      "main.js",
+      "node_modules/**/*",
+      "package.json",
+      "open_excel_find_replace.py"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}

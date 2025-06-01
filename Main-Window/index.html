@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none';">
+    <title>PCB Profile Predictor - Main Window</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PCB Profile Predictor</h1>
+        
+        <div class="input-group">
+            <button id="open-excel-btn">Open PCB Data</button>
+        </div>
+        
+        <div class="input-group">
+            <label for="length">Length (mm):</label>
+            <input type="text" id="length" placeholder="Enter length">
+        </div>
+
+        <div class="input-group">
+            <label for="width">Width (mm):</label>
+            <input type="text" id="width" placeholder="Enter width">
+        </div>
+
+        <div class="input-group">
+            <label for="thickness">Thickness (mm):</label>
+            <input type="text" id="thickness" placeholder="Enter thickness">
+        </div>
+
+        <div class="input-group">
+            <label for="layers">Layers:</label>
+            <input type="text" id="layers" placeholder="Enter layers">
+        </div>
+
+        <div class="input-group">
+            <label for="cu-outer">Cu Thickness (Outer):</label>
+            <input type="text" id="cu-outer" placeholder="Enter Cu thickness (outer)">
+        </div>
+
+        <div class="input-group">
+            <label for="cu-inner">Cu Thickness (Inner):</label>
+            <input type="text" id="cu-inner" placeholder="Enter Cu thickness (inner)">
+        </div>
+
+        <div class="input-group">
+            <label for="solder-paste">Solder Paste Type:</label>
+            <select id="solder-paste">
+                <option value="Koki S3X58-M406-3">Koki S3X58-M406-3</option>
+                <option value="QUALITEK 6701 NC SnPb">QUALITEK 6701 NC SnPb</option>
+            </select>
+        </div>
+
+        <div class="button-container">
+            <button id="flw-btn">FLW-VP1060N</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
